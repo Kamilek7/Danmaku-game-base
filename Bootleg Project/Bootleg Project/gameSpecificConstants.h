@@ -25,15 +25,5 @@ public:
 	void playE(float enemTime);
 	void reset() { this->currentFrame = 0; }
 };
-class Animation
-{
-	std::string entityName;
-	float scale;
-public:
-	AnimatedSprite idle;
-	AnimatedSprite left;
-	AnimatedSprite right;
-	Animation(std::string _entityName="reimu", float _scale=1.6);
-	Animation operator=(const Animation& temp) { return Animation(temp.entityName, temp.scale); }
-};
+
 #endif

@@ -2,6 +2,7 @@
 #define GAMEBOARD_H_
 #define _USE_MATH_DEFINES
 #include "gameSpecificConstants.h"
+#include "animation.h"
 #include <string>
 #include <cmath>
 #include <cstdlib>
