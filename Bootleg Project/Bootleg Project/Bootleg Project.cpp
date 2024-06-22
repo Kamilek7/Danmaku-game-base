@@ -103,9 +103,9 @@ int main()
             {
                 game.pauseUnpause();
                 if (game.checkPause())
-                    game.playSound("se_pause.wav");
+                    SoundManager::playSound("se_pause.wav");
                 else
-                    game.playSound("se_cancel00.wav");
+                    SoundManager::playSound("se_cancel00.wav");
                 stop = true;
             }
             game.player->moveX(A, D);
@@ -115,6 +115,11 @@ int main()
             {
                 if (!(game.entities[i]->isDestroyed()))
                     window.draw(game.entities[i]->getSprite());
+            }
+            for (int i = 0; i < DanmakuManager::bullets.size(); i++)
+            {
+                if (!(DanmakuManager::bullets[i]->isDestroyed()))
+                    window.draw(DanmakuManager::bullets[i]->getSprite());
             }
             window.draw(game.HUD);
             window.draw(game.Score);
@@ -148,7 +153,7 @@ int main()
                     D = false;
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
                 {
-                    game.playSound("se_ok00.wav");
+                    SoundManager::playSound("se_ok00.wav");
                     gameMode = 1 + selection;
                 } 
             }
@@ -157,14 +162,14 @@ int main()
                 selection--;
                 A = false;
                 S = false;
-                game.playSound("se_select00.wav");
+                SoundManager::playSound("se_select00.wav");
             }
             else if (D || W)
             {
                 selection++;
                 D = false;
                 W = false;
-                game.playSound("se_select00.wav");
+                SoundManager::playSound("se_select00.wav");
             }
             if (selection < 0)
                 selection = game.Options.size() - 1;
@@ -195,12 +200,12 @@ int main()
             window.draw(opt1);
             if (selected && unselected && !game.checkPause())
             {
-                game.playSound("se_ok00.wav");
+                SoundManager::playSound("se_ok00.wav");
                 game.nextStage();
                 selected = false;
             }
         }
-        if (game.checkPause() && game.player->numberOfLives()>0)
+        if (game.checkPause() && ScoreManager::getLives()>0)
         {
             static int choice = 0;
             sf::RectangleShape effect;
@@ -229,7 +234,7 @@ int main()
             opcje.push_back(opt3);
             if (selected && unselected)
             {
-                game.playSound("se_ok00.wav");
+                SoundManager::playSound("se_ok00.wav");
                 if (choice == 0)
                     game.pauseUnpause();
                 else if (choice == 1)
@@ -246,14 +251,14 @@ int main()
                 choice++;
                 D = false;
                 S = false;
-                game.playSound("se_select00.wav");
+                SoundManager::playSound("se_select00.wav");
             }
             else if (A || W)
             {
                 choice--;
                 A = false;
                 W = false;
-                game.playSound("se_select00.wav");
+                SoundManager::playSound("se_select00.wav");
             }
             if (choice < 0)
                 choice = 2;
@@ -268,7 +273,7 @@ int main()
                 window.draw(opcje[i]);
             }
         }
-        else if (game.player->numberOfLives() == 0)
+        else if (ScoreManager::getLives() == 0)
         {
             static int choice = 0;
             sf::RectangleShape effect;
@@ -293,7 +298,7 @@ int main()
             opcje.push_back(opt3);
             if (selected && unselected)
             {
-                game.playSound("se_ok00.wav");
+                SoundManager::playSound("se_ok00.wav");
                 if (choice == 0)
                     game.restart();
                 else if (choice == 1)
@@ -308,14 +313,14 @@ int main()
                 choice++;
                 D = false;
                 S = false;
-                game.playSound("se_select00.wav");
+                SoundManager::playSound("se_select00.wav");
             }
             else if (A || W)
             {
                 choice--;
                 A = false;
                 W = false;
-                game.playSound("se_select00.wav");
+                SoundManager::playSound("se_select00.wav");
             }
             if (choice < 0)
                 choice = 1;

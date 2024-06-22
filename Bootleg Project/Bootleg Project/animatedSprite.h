@@ -1,10 +1,6 @@
-#ifndef GAME_CONSTANTS_H_
-#define GAME_CONSTANTS_H_
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
-#include <string>
+#pragma once
+
+#include "constants.h"
 
 class AnimatedSprite
 {
@@ -25,5 +21,3 @@ public:
 	void playE(float enemTime);
 	void reset() { this->currentFrame = 0; }
 };
-
-#endif

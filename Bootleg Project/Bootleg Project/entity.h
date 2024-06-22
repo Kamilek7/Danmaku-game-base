@@ -1,14 +1,5 @@
-#ifndef ENTITY_H_
-#define ENTITY_H_
-#define _USE_MATH_DEFINES
-#include "gameSpecificConstants.h"
-#include "gameboard.h"
-#include <string>
-#include <cmath>
-#include <cstdlib>
-#include <vector>
-#include <algorithm>
-#include <iostream>
+#pragma once
+#include "constants.h"
 
 class Entity
 {
@@ -41,8 +32,7 @@ public:
     bool isReady() { return this->ready; }
     void readyChange(bool f) { this->ready = f; }
     virtual void process(float dt);
-    virtual void destroy(Board* b, char full = 'n') = 0;
-    virtual void doWhenReady(Board* b, float dt) = 0;
+    virtual void destroy(char full = 'n') = 0;
+    virtual void doWhenReady(float dt) = 0;
     virtual char movingDirection() = 0;
 };
-#endif

@@ -1,4 +1,4 @@
-#include "gameSpecificConstants.h"
+#include "animatedSprite.h"
 #include <algorithm>
 
 AnimatedSprite AnimatedSprite::operator=(const AnimatedSprite& temp)
