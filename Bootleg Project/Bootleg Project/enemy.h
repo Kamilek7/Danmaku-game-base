@@ -1,6 +1,7 @@
 #pragma once
 #include "entity.h"
 #include "danmaku.h"
+#include "pointsOnBoard.h"
 
 class Enemy :public Entity
 {

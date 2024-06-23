@@ -123,8 +123,8 @@ void Enemy::destroy( char full)
         int num = this->getSize() / 5;
         if (rand() % 5)
         {
-            //for (int i = 0; i < num; i++)
-            //    b->createRandomScorePoints(this->getLocation());
+            for (int i = 0; i < num; i++)
+                PointsManager::createRandomScorePoints(this->getLocation());
         }
         ScoreManager::changeScores(num * 100);
         this->destroyed = true;

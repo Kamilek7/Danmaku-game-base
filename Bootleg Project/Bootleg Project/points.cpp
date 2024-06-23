@@ -21,7 +21,7 @@ void Points::destroy(char full)
         if (this->getType() == 'p')
         {
             ScoreManager::changeScores(50);
-            ScoreManager::changeScores(1);
+            ScoreManager::increasePower(1);
         }
         else if (this->getType() == 's')
             ScoreManager::changeScores(this->getValue());

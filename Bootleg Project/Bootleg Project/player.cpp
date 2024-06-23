@@ -111,13 +111,13 @@ void Player::doWhenReady(float dt)
     {
         SoundManager::playSound("se_plst00.wav");
         int tempPower = ScoreManager::getPower();
-        if (tempPower < 100)
+        if (tempPower < 50)
             for (int i = -1; i < 2; i++)
                 DanmakuManager::createBullet(this->x + 5 * i, this->y, 'P', 6, 1000, M_PI / 2 * 3 + 0.02 * i, 0, 100);
-        else if (tempPower < 200)
+        else if (tempPower < 100)
             for (int i = -2; i < 3; i++)
                 DanmakuManager::createBullet(this->x + 5 * i, this->y, 'P', 6, 1000, M_PI / 2 * 3 + 0.02 * i, 0, 100);
-        else if (tempPower < 300)
+        else if (tempPower < 150)
             for (int i = -3; i < 4; i++)
                 DanmakuManager::createBullet(this->x + 5 * i, this->y, 'P', 6, 1000, M_PI / 2 * 3 + 0.02 * i, 0, 100);
         else

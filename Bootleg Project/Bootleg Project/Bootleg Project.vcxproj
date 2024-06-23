@@ -136,12 +136,36 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bootleg Project.cpp" />
-    <ClCompile Include="gameBoard.cpp" />
-    <ClCompile Include="gameSpecificConstants.cpp" />
+    <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="constants.cpp" />
+    <ClCompile Include="danmaku.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="animatedSprite.cpp" />
+    <ClCompile Include="animation.cpp" />
+    <ClCompile Include="board.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="points.cpp" />
+    <ClCompile Include="pointsOnBoard.cpp" />
+    <ClCompile Include="score.cpp" />
+    <ClCompile Include="sound.cpp" />
+    <ClCompile Include="spriteManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="gameBoard.h" />
-    <ClInclude Include="gameSpecificConstants.h" />
+    <ClInclude Include="bullet.h" />
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="danmaku.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="animatedSprite.h" />
+    <ClInclude Include="animation.h" />
+    <ClInclude Include="board.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="points.h" />
+    <ClInclude Include="pointsOnBoard.h" />
+    <ClInclude Include="score.h" />
+    <ClInclude Include="sound.h" />
+    <ClInclude Include="spriteManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

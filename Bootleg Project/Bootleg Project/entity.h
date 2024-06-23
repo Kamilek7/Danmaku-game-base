@@ -20,6 +20,7 @@ protected:
     sf::Texture texture;
     sf::Sprite sprite;
 public:
+    friend class DanmakuManager;
     friend class Board;
     Entity(float _x = 0, float _y = 0, float _hitbox_size = 4, float _speed = 0, float _rotation = 0, float _ang_speed_of_rotation = 0, float _acceleration = 0, char _type = 'B');
     bool out_of_bounds() { if (this->x > GAME_WIDTH || this->x < 0 || this->y > GAME_HEIGHT || this->y < 0) return true; else return false; }

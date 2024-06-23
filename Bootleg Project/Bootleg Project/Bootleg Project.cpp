@@ -1,5 +1,17 @@
-﻿#include "gameBoard.h"
+﻿#include "animatedSprite.h"
+#include "animation.h"
+#include "points.h"
+#include "bullet.h"
+#include "player.h"
+#include "board.h"
+
+#include <string>
+#include <cmath>
+#include <cstdlib>
+#include <vector>
+#include <algorithm>
 #include <ctime>
+
 extern const float APP_WIDTH;
 extern const float APP_HEIGHT;
 extern const float GAME_WIDTH;
@@ -111,6 +123,11 @@ int main()
             game.player->moveX(A, D);
             game.player->moveY(W, S);
             window.draw(game.GAMEBOARD);
+            for (int i = 0; i < PointsManager::points.size(); i++)
+            {
+                if (!(PointsManager::points[i]->isDestroyed()))
+                    window.draw(PointsManager::points[i]->getSprite());
+            }
             for (int i = 0; i < game.entities.size(); i++)
             {
                 if (!(game.entities[i]->isDestroyed()))

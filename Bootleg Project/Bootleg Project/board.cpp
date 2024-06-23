@@ -10,16 +10,6 @@ Board::Board()
     waitingTimer = 0;
     player = new Player();
     entities = { this->player };
-    Animation reimu("reimu", 1.6);
-    AnimationTypes.push_back(reimu);
-    Animation enemy("enemy", 1.6);
-    AnimationTypes.push_back(enemy);
-    BulletTextures.loadFromFile("resources\\sprites\\bullet1a.png");
-    BulletTextures.setSmooth(true);
-    BulletSprites.setTexture(this->BulletTextures);
-    BulletTextures1.loadFromFile("resources\\sprites\\playerBullet1.png");
-    BulletTextures1.setSmooth(true);
-    BulletSprites1.setTexture(this->BulletTextures1);
     GameBackground.loadFromFile("resources\\HUD\\bg.png");
     GAMEBOARD.setTexture(GameBackground);
     GAMEBOARD.setPosition(sf::Vector2f(W_OFFSET, H_OFFSET));
@@ -45,88 +35,85 @@ Board::Board()
 
 bool Board::checkCollisionTypes(Entity* a1, Entity* b1)
 {
-    char a = a1->checkType();
-    char b = b1->checkType();
-    int numA = 0;
-    int numB = 0;
-    char toNum[5] = { 'E','P','S','b','B' };
-    char cols[5][5] = { {0,0,0,1,0},{1,0,0,0,1},{0,1,0,0,0},{1,0,0,0,0},{0,1,0,0,0} };
-    for (int k = 0; k < 5; k++)
-    {
-        if (a == toNum[k])
-            numA = k;
-        if (b == toNum[k])
-            numB = k;
-    }
-    return cols[numA][numB];
+        char a = a1->checkType();
+        char b = b1->checkType();
+        int numA = 0;
+        int numB = 0;
+        char toNum[5] = { 'E','P','S','b','B' };
+        char cols[5][5] = { {0,0,0,1,0},{1,0,0,0,1},{0,0,0,0,0},{1,0,0,0,0},{0,1,0,0,0} };
+        for (int k = 0; k < 5; k++)
+        {
+            if (a == toNum[k])
+                numA = k;
+            if (b == toNum[k])
+                numB = k;
+        }
+        return cols[numA][numB];
 }
 void Board::manageCollisions()
 {
     std::vector <Entity*> areas[6][7];
-    for (auto i : this->entities)
-        if ((i->getLocation().x / 120) < 6 && (i->getLocation().y / 120) < 7 && (i->getLocation().x / 120) > 0 && (i->getLocation().y / 120) > 0)
-            areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].insert(areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].end(), i);
     for (auto i : DanmakuManager::bullets)
     {
         if ((i->getLocation().x / 120) < 6 && (i->getLocation().y / 120) < 7 && (i->getLocation().x / 120) > 0 && (i->getLocation().y / 120) > 0)
             areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].insert(areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].end(), i);
     }
+    for (auto i : PointsManager::points)
+    {
+        if ((i->getLocation().x / 120) < 6 && (i->getLocation().y / 120) < 7 && (i->getLocation().x / 120) > 0 && (i->getLocation().y / 120) > 0)
+            areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].insert(areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].end(), i);
+    }
+    for (auto i : this->entities)
+        if ((i->getLocation().x / 120) < 6 && (i->getLocation().y / 120) < 7 && (i->getLocation().x / 120) > 0 && (i->getLocation().y / 120) > 0)
+            areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].insert(areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].end(), i);
+
     for (int i = 0; i < 6; i++)
     {
         for (int j = 0; j < 7; j++)
         {
             for (auto k : areas[i][j])
             {
-                if (k->checkType() == 'B')
+                if (!k->isDestroyed() && !entities[0]->isDestroyed())
                 {
-                    if (k->getHitboxC().getGlobalBounds().intersects(entities[0]->getHitboxC().getGlobalBounds()))
+                    if (k->checkType() == 'B')
                     {
-                        k->destroy();
-                        entities[0]->destroy();
-                    }
-                }
-                else if (k->checkType() == 'S')
-                {
-                    if (k->getHitboxC().getGlobalBounds().intersects(entities[0]->getHitboxC().getGlobalBounds()))
-                    {
-                        k->destroy();
-                    }
-                }
-                else
-                {
-                    auto temp = adjacentTiles(i, j);
-                    for (auto l : temp)
-                    {
-                        for (auto m : areas[int(l.x)][int(l.y)])
+                        if (k->getHitboxC().getGlobalBounds().intersects(entities[0]->getHitboxC().getGlobalBounds()))
                         {
-                            if (k->getHitboxC().getGlobalBounds().intersects(m->getHitboxC().getGlobalBounds()))
+                            k->destroy();
+                            entities[0]->destroy();
+                        }
+                    }
+                    else if (k->checkType() == 'S')
+                    {
+                        if (k->getHitboxC().getGlobalBounds().intersects(entities[0]->getHitboxC().getGlobalBounds()))
+                        {
+                            k->destroy();
+                        }
+                    }
+                    else
+                    {
+                        auto temp = adjacentTiles(i, j);
+                        for (auto l : temp)
+                        {
+                            for (auto m : areas[int(l.x)][int(l.y)])
                             {
-                                if (this->checkCollisionTypes(m, k))
-                                    m->destroy();
+                                if (!m->isDestroyed() && k->getHitboxC().getGlobalBounds().intersects(m->getHitboxC().getGlobalBounds())  )
+                                {
+                                    if (this->checkCollisionTypes(m, k))
+                                    {
+                                        m->destroy();
+                                        k->destroy();
+                                    }
+
+                                }
                             }
                         }
                     }
                 }
+
             }
         }
     }
-}
-void Board::createRandomScorePoints(cords pos)
-{
-    char _type;
-    int _value;
-    if (rand() % 2)
-    {
-        _type = 'p';
-        _value = 1;
-    }
-    else
-    {
-        _type = 's';
-        _value = 1000;
-    }
-    Points* temp = new Points(pos.x + ((rand() % 20) * 2 * pow(-1, rand() % 2)), pos.y + ((rand() % 20) * 2 * pow(-1, rand() % 2)), _type, _value);
-    this->entities.insert(this->entities.end(), temp);
 }
 void Board::updateEntities(float dt)
 {
@@ -141,26 +128,26 @@ void Board::updateEntities(float dt)
             {
                 if (this->player->movingDirection() == 'L')
                 {
-                    this->AnimationTypes[0].left.play(dt);
-                    this->entities[i]->sprite = this->AnimationTypes[0].left.baseSprite;
+                    sprites.AnimationTypes[0].left.play(dt);
+                    this->entities[i]->sprite = sprites.AnimationTypes[0].left.baseSprite;
                 }
                 else if (this->player->movingDirection() == 'R')
                 {
-                    this->AnimationTypes[0].right.play(dt);
-                    this->entities[i]->sprite = this->AnimationTypes[0].right.baseSprite;
+                    sprites.AnimationTypes[0].right.play(dt);
+                    this->entities[i]->sprite = sprites.AnimationTypes[0].right.baseSprite;
                 }
                 else
                 {
-                    AnimationTypes[0].left.reset();
-                    AnimationTypes[0].right.reset();
-                    this->AnimationTypes[0].idle.play(dt);
-                    this->entities[i]->sprite = this->AnimationTypes[0].idle.baseSprite;
+                    sprites.AnimationTypes[0].left.reset();
+                    sprites.AnimationTypes[0].right.reset();
+                    sprites.AnimationTypes[0].idle.play(dt);
+                    this->entities[i]->sprite = sprites.AnimationTypes[0].idle.baseSprite;
                 }
             }
             else if (this->entities[i]->checkType() != 'S')
             {
-                this->AnimationTypes[1].idle.playE(this->entities[i]->animTimer);
-                this->entities[i]->sprite = this->AnimationTypes[1].idle.baseSprite;
+                sprites.AnimationTypes[1].idle.playE(this->entities[i]->animTimer);
+                this->entities[i]->sprite = sprites.AnimationTypes[1].idle.baseSprite;
                 this->entities[i]->sprite.setOrigin(24, 24);
             }
             this->entities[i]->process(dt);
@@ -172,24 +159,9 @@ void Board::updateEntities(float dt)
             this->entities[i]->doWhenReady(dt);
         }
     }
-
-
-    for (int i = 0; i < DanmakuManager::bullets.size(); i++)
-    {
-                    if (DanmakuManager::bullets[i]->checkType() == 'B')
-                    {
-                        DanmakuManager::bullets[i]->sprite = this->BulletSprites;
-                        DanmakuManager::bullets[i]->sprite.setOrigin(8, 8);
-                        DanmakuManager::bullets[i]->sprite.setScale(1.4, 1.4);
-                        DanmakuManager::bullets[i]->sprite.setRotation(DanmakuManager::bullets[i]->rotation * 180 / M_PI + 90);
-            }
-                    else if (DanmakuManager::bullets[i]->checkType() == 'b')
-                    {
-                        DanmakuManager::bullets[i]->sprite = this->BulletSprites1;
-                        DanmakuManager::bullets[i]->sprite.setOrigin(8, 8);
-                        DanmakuManager::bullets[i]->sprite.setScale(1.5, 1.5);
-            }
-    }
+    DanmakuManager::setPlayerPos(this->player->getLocation());
+    DanmakuManager::bulletUpdate(dt);
+    PointsManager::pointsUpdate(dt);
     std::string temp = "Score: \n" + std::to_string(ScoreManager::getScore());
     this->Score.setString(temp);
     temp = "Power: \n" + std::to_string(ScoreManager::getPower());

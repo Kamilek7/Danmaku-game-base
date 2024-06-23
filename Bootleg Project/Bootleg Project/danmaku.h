@@ -1,6 +1,9 @@
 #pragma once
 #include "bullet.h"
 #include "constants.h"
+#include "spriteManager.h"
+
+extern SpriteManager sprites;
 class DanmakuManager
 {
     static cords playerPos;
@@ -17,4 +20,5 @@ public:
     static void SnowflakeShot(cords pos, int amount, bool timed = false, float T = 0, float dt = 0);
     static void HomingUShot(cords pos, int amount, bool timed = false, float T = 0, float dt = 0);
 
+    static void bulletUpdate(float dt);
 };
