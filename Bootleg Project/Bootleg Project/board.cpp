@@ -9,7 +9,6 @@ Board::Board()
     waveTimer = 0;
     waitingTimer = 0;
     player = new Player();
-    entities = { this->player };
     GameBackground.loadFromFile("resources\\HUD\\bg.png");
     GAMEBOARD.setTexture(GameBackground);
     GAMEBOARD.setPosition(sf::Vector2f(W_OFFSET, H_OFFSET));
@@ -63,9 +62,13 @@ void Board::manageCollisions()
         if ((i->getLocation().x / 120) < 6 && (i->getLocation().y / 120) < 7 && (i->getLocation().x / 120) > 0 && (i->getLocation().y / 120) > 0)
             areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].insert(areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].end(), i);
     }
-    for (auto i : this->entities)
+    for (auto i : EnemyManager::enemies)
+    {
         if ((i->getLocation().x / 120) < 6 && (i->getLocation().y / 120) < 7 && (i->getLocation().x / 120) > 0 && (i->getLocation().y / 120) > 0)
             areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].insert(areas[int(i->getLocation().x / 120)][int(i->getLocation().y / 120)].end(), i);
+    }
+	if ((this->player->getLocation().x / 120) < 6 && (this->player->getLocation().y / 120) < 7 && (this->player->getLocation().x / 120) > 0 && (this->player->getLocation().y / 120) > 0)
+		areas[int(this->player->getLocation().x / 120)][int(this->player->getLocation().y / 120)].insert(areas[int(this->player->getLocation().x / 120)][int(this->player->getLocation().y / 120)].end(), this->player);
 
     for (int i = 0; i < 6; i++)
     {
@@ -73,19 +76,11 @@ void Board::manageCollisions()
         {
             for (auto k : areas[i][j])
             {
-                if (!k->isDestroyed() && !entities[0]->isDestroyed())
+                if (!k->isDestroyed() && !this->player->isDestroyed() && !this->player->isInCoolDown() && !k->isInCoolDown())
                 {
-                    if (k->checkType() == 'B')
+                    if (k->checkType() == 'S')
                     {
-                        if (k->getHitboxC().getGlobalBounds().intersects(entities[0]->getHitboxC().getGlobalBounds()))
-                        {
-                            k->destroy();
-                            entities[0]->destroy();
-                        }
-                    }
-                    else if (k->checkType() == 'S')
-                    {
-                        if (k->getHitboxC().getGlobalBounds().intersects(entities[0]->getHitboxC().getGlobalBounds()))
+                        if (k->getHitboxC().getGlobalBounds().intersects(this->player->getHitboxC().getGlobalBounds()))
                         {
                             k->destroy();
                         }
@@ -97,7 +92,7 @@ void Board::manageCollisions()
                         {
                             for (auto m : areas[int(l.x)][int(l.y)])
                             {
-                                if (!m->isDestroyed() && k->getHitboxC().getGlobalBounds().intersects(m->getHitboxC().getGlobalBounds())  )
+                                if (!m->isDestroyed() && k->getHitboxC().getGlobalBounds().intersects(m->getHitboxC().getGlobalBounds()) && !m->isInCoolDown() )
                                 {
                                     if (this->checkCollisionTypes(m, k))
                                     {
@@ -118,50 +113,11 @@ void Board::manageCollisions()
 void Board::updateEntities(float dt)
 {
     this->manageCollisions();
-    for (int i = 0; i < this->entities.size(); i++)
-    {
-        if (this->entities[i]->out_of_bounds() || this->entities[i]->destroyed)
-            this->entities.erase(this->entities.begin() + i);
-        else
-        {
-            if (this->entities[i]->checkType() == 'P')
-            {
-                if (this->player->movingDirection() == 'L')
-                {
-                    sprites.AnimationTypes[0].left.play(dt);
-                    this->entities[i]->sprite = sprites.AnimationTypes[0].left.baseSprite;
-                }
-                else if (this->player->movingDirection() == 'R')
-                {
-                    sprites.AnimationTypes[0].right.play(dt);
-                    this->entities[i]->sprite = sprites.AnimationTypes[0].right.baseSprite;
-                }
-                else
-                {
-                    sprites.AnimationTypes[0].left.reset();
-                    sprites.AnimationTypes[0].right.reset();
-                    sprites.AnimationTypes[0].idle.play(dt);
-                    this->entities[i]->sprite = sprites.AnimationTypes[0].idle.baseSprite;
-                }
-            }
-            else if (this->entities[i]->checkType() != 'S')
-            {
-                sprites.AnimationTypes[1].idle.playE(this->entities[i]->animTimer);
-                this->entities[i]->sprite = sprites.AnimationTypes[1].idle.baseSprite;
-                this->entities[i]->sprite.setOrigin(24, 24);
-            }
-            this->entities[i]->process(dt);
-        }
-
-        if (this->entities[i]->isReady())
-        {
-            this->entities[i]->readyChange(false);
-            this->entities[i]->doWhenReady(dt);
-        }
-    }
+    this->player->playerUpdate(dt);
     DanmakuManager::setPlayerPos(this->player->getLocation());
     DanmakuManager::bulletUpdate(dt);
     PointsManager::pointsUpdate(dt);
+    EnemyManager::enemyUpdate(dt);
     std::string temp = "Score: \n" + std::to_string(ScoreManager::getScore());
     this->Score.setString(temp);
     temp = "Power: \n" + std::to_string(ScoreManager::getPower());
@@ -173,59 +129,6 @@ void Board::updateEntities(float dt)
     this->Lives.setPosition((APP_WIDTH - GAME_WIDTH) / 5 + GAME_WIDTH + W_OFFSET, APP_HEIGHT / 8 + 200);
 }
 
-void Board::createEnemy(bool _boss, int _type, int _variant, int _position, float _x, float _y, float _hp, float _hitbox_radius, float _speed, float _rotation, float _ang_speed_of_rotation, float _acceleration)
-{
-    static int count = 0;
-    count++;
-    Enemy* temp = new Enemy(_boss, _type, _variant, _position, _x, _y, _hp, _hitbox_radius, _speed, _rotation, _ang_speed_of_rotation, _acceleration);
-    this->entities.insert(entities.end(), temp);
-}
-void Board::enemiesInWaves(int type, int variant)
-{
-    if (type == 1)
-    {
-        createEnemy(false, type, variant, 1, GAME_WIDTH - 32, GAME_HEIGHT / 5 - 12, 9, 12, 70, M_PI, 0, 0);
-        createEnemy(false, type, variant, 0, GAME_WIDTH - 32, GAME_HEIGHT / 5 + 24, 9, 12, 70, M_PI, 0, 0);
-        createEnemy(false, type, variant, 1, 32, GAME_HEIGHT / 5 - 12, 5, 12, 70, 0, 0, 0);
-        createEnemy(false, type, variant, 0, 32, GAME_HEIGHT / 5 + 24, 5, 12, 70, 0, 0, 0);
-    }
-    else if (type == 2)
-    {
-        if (variant == 0)
-        {
-            for (int i = 0; i < 5; i++)
-                createEnemy(false, type, variant, 0, GAME_WIDTH - 32, GAME_HEIGHT / 8 + (rand() % 10) * 20, 4, 12, (200 + (rand() % 10) * 20), M_PI - 0.2, 0, 30);
-        }
-        else
-        {
-            for (int i = 0; i < 5; i++)
-                createEnemy(false, type, variant, 0, 24, GAME_HEIGHT / 8 + (rand() % 10) * 20, 4, 12, 200 + (rand() % 10) * 20, -0.2, 0, 30);
-        }
-    }
-    else if (type == 3)
-    {
-        if ((int)((variant + 1) / 3) == 0)
-        {
-            createEnemy(false, type, variant, 0, GAME_WIDTH * 0.35 - 24, H_OFFSET, 10, 16, (100), M_PI / 2, 0, 30);
-            createEnemy(false, type, variant, 0, GAME_WIDTH * 0.65 - 24, H_OFFSET, 10, 16, (100), M_PI / 2, 0, 30);
-        }
-        else
-        {
-            createEnemy(false, type, variant, 0, GAME_WIDTH - 32, 0, 10, 16, (100), M_PI / 4 * 3, 0, 30);
-            createEnemy(false, type, variant, 0, 24, 0, 10, 16, (100), M_PI / 4, 0, 30);
-        }
-    }
-    else if (type == 4)
-    {
-        createEnemy(false, type, variant, 0, GAME_WIDTH * 0.2 - 24, H_OFFSET, 50, 25, (20), M_PI / 2, -0.3, 10);
-        createEnemy(false, type, variant, 0, GAME_WIDTH * 0.8 - 24, H_OFFSET, 50, 25, (20), M_PI / 2, 0.3, 10);
-    }
-    else if (type == 5)
-    {
-        createEnemy(false, type, variant, 0, GAME_WIDTH * 0.2 - 24, GAME_HEIGHT - 90, 20, 20, (50), 3 * M_PI / 2, 0.5, 10);
-        createEnemy(false, type, variant, 0, GAME_WIDTH * 0.8 - 24, GAME_HEIGHT - 90, 20, 20, (50), 3 * M_PI / 2, -0.5, 10);
-    }
-}
 void Board::waveProcess(float dt)
 {
     static int type = (rand() % ENEMY_TYPES) + 1;
@@ -263,7 +166,7 @@ void Board::waveProcess(float dt)
     if (this->waitingTimer > breaktime && this->waveTimer < time && this->waveTimer > 0)
     {
         this->waitingTimer = 0;
-        enemiesInWaves(type, variant);
+        EnemyManager::enemiesInWaves(type, variant);
     }
     if (this->waveTimer > time)
     {
@@ -314,7 +217,7 @@ void Board::gameProcess(float dt, int gameMode)
             if (on)
             {
                 on = false;
-                this->createEnemy(true, 1, 2);
+                EnemyManager::createEnemy(true, 1, 2);
             }
         }
         else
@@ -333,18 +236,16 @@ void Board::gameProcess(float dt, int gameMode)
                 if (timer <= 60 && on && timer > 10)
                 {
                     on = false;
-                    for (int j = 0; j < this->entities.size(); j++)
-                        if (this->entities[j]->type == 'E')
-                            this->entities[j]->destroy('f');
+                    for (int j = 0; j < EnemyManager::enemies.size(); j++)
+                        EnemyManager::enemies[j]->destroy('f');
                     int random = rand() % MIDBOSS_TYPES;
                     int random1 = rand() % SPELLCARDS;
-                    createEnemy(true, random + 1, random1, 0, GAME_WIDTH / 2 - 30, 30, 1000, 30, 50, M_PI / 2, 0, -10);
+                    EnemyManager::createEnemy(true, random + 1, random1, 0, GAME_WIDTH / 2 - 30, 30, 1000, 30, 50, M_PI / 2, 0, -10);
                 }
                 else if (timer > 60)
                 {
-                    for (int j = 0; j < this->entities.size(); j++)
-                        if (this->entities[j]->type == 'E')
-                            this->entities[j]->destroy('f');
+                    for (int j = 0; j < EnemyManager::enemies.size(); j++)
+                        EnemyManager::enemies[j]->destroy('f');
                     this->endStage = true;
                     on = true;
                 }
@@ -355,18 +256,14 @@ void Board::gameProcess(float dt, int gameMode)
                 if (timer <= 30 && on)
                 {
                     on = false;
-                    for (int j = 0; j < this->entities.size(); j++)
-                        if (this->entities[j]->type == 'E')
-                            this->entities[j]->destroy('f');
+                    for (int j = 0; j < EnemyManager::enemies.size(); j++)
+                        EnemyManager::enemies[j]->destroy('f');
                     int random = rand() % MIDBOSS_TYPES;
                     int random1 = rand() % SPELLCARDS;
-                    createEnemy(true, random + 1, random1, 0, GAME_WIDTH / 2 - 30, 30, 1000, 30, 50, M_PI / 2, 0, -10);
+                    EnemyManager::createEnemy(true, random + 1, random1, 0, GAME_WIDTH / 2 - 30, 30, 1000, 30, 50, M_PI / 2, 0, -10);
                 }
-                else if (timer > 30 || this->entities.size() == 0)
+                else if (timer > 30 || EnemyManager::enemies.size() == 0)
                 {
-                    for (int j = 0; j < this->entities.size(); j++)
-                        if (this->entities[j]->type == 'E')
-                            this->entities[j]->destroy('f');
                     this->stage_progress = 0.66;
                     timer = 0;
                     on = true;
@@ -383,5 +280,4 @@ void Board::restart()
     waveTimer = 0;
     waitingTimer = 0;
     player = new Player();
-    entities = { this->player };
 }

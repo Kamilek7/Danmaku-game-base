@@ -125,3 +125,34 @@ void Player::doWhenReady(float dt)
                 DanmakuManager::createBullet(this->x + 5 * i, this->y, 'P', 6, 1000, M_PI / 2 * 3 + 0.02 * i, 0, 100);
     }
 }
+
+void Player::playerUpdate(float dt)
+{
+    if (!(this->out_of_bounds() || this->isDestroyed()))
+    {
+            if (this->movingDirection() == 'L')
+            {
+                sprites.AnimationTypes[0].left.play(dt);
+                this->sprite = sprites.AnimationTypes[0].left.baseSprite;
+            }
+            else if (this->movingDirection() == 'R')
+            {
+                sprites.AnimationTypes[0].right.play(dt);
+                this->sprite = sprites.AnimationTypes[0].right.baseSprite;
+            }
+            else
+            {
+                sprites.AnimationTypes[0].left.reset();
+                sprites.AnimationTypes[0].right.reset();
+                sprites.AnimationTypes[0].idle.play(dt);
+                this->sprite = sprites.AnimationTypes[0].idle.baseSprite;
+            }
+        this->process(dt);
+    }
+
+    if (this->isReady())
+    {
+        this->readyChange(false);
+        this->doWhenReady(dt);
+    }
+}

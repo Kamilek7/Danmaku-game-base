@@ -143,20 +143,26 @@ void DanmakuManager::bulletUpdate(float dt)
 {
     for (int i = 0; i < bullets.size(); i++)
     {
-        if (bullets[i]->checkType() == 'B')
+        if (bullets[i]->out_of_bounds() || bullets[i]->isDestroyed())
+            bullets.erase(bullets.begin() + i);
+        else
         {
-            bullets[i]->sprite = sprites.BulletSprites;
-            bullets[i]->sprite.setOrigin(8, 8);
-            bullets[i]->sprite.setScale(1.4, 1.4);
-            bullets[i]->sprite.setRotation(bullets[i]->rotation * 180 / M_PI + 90);
+            if (bullets[i]->checkType() == 'B')
+            {
+                bullets[i]->sprite = sprites.BulletSprites;
+                bullets[i]->sprite.setOrigin(8, 8);
+                bullets[i]->sprite.setScale(1.4, 1.4);
+                bullets[i]->sprite.setRotation(bullets[i]->rotation * 180 / M_PI + 90);
+            }
+            else if (bullets[i]->checkType() == 'b')
+            {
+                bullets[i]->sprite = sprites.BulletSprites1;
+                bullets[i]->sprite.setOrigin(8, 8);
+                bullets[i]->sprite.setScale(1.5, 1.5);
+            }
+            bullets[i]->process(dt);
         }
-        else if (bullets[i]->checkType() == 'b')
-        {
-            bullets[i]->sprite = sprites.BulletSprites1;
-            bullets[i]->sprite.setOrigin(8, 8);
-            bullets[i]->sprite.setScale(1.5, 1.5);
-        }
-        bullets[i]->process(dt);
+
     }
 }
 

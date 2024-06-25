@@ -14,6 +14,7 @@ protected:
     char type;
     bool destroyed;
     bool ready;
+    bool cooldown;
     float animTimer;
     sf::CircleShape circHitbox;
     sf::Color color;
@@ -26,11 +27,13 @@ public:
     bool out_of_bounds() { if (this->x > GAME_WIDTH || this->x < 0 || this->y > GAME_HEIGHT || this->y < 0) return true; else return false; }
     cords getLocation();
     float getSize() { return this->hitbox_size; }
+    float animTimerGet() { return this->animTimer; }
     char checkType() { return this->type; }
     sf::Sprite getSprite() { return this->sprite; }
     sf::CircleShape getHitboxC() { return this->circHitbox; }
     bool isDestroyed() { return this->destroyed; }
     bool isReady() { return this->ready; }
+    bool isInCoolDown() { return this->cooldown; }
     void readyChange(bool f) { this->ready = f; }
     virtual void process(float dt);
     virtual void destroy(char full = 'n') = 0;

@@ -139,6 +139,7 @@
     <ClCompile Include="bullet.cpp" />
     <ClCompile Include="constants.cpp" />
     <ClCompile Include="danmaku.cpp" />
+    <ClCompile Include="enemiesOnBoard.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="animatedSprite.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="bullet.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="danmaku.h" />
+    <ClInclude Include="enemiesOnBoard.h" />
     <ClInclude Include="enemy.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="animatedSprite.h" />

@@ -4,7 +4,6 @@
 
 class Player :public Entity
 {
-    bool cooldown;
     float xSpeed;
     float ySpeed;
 public:
@@ -18,4 +17,5 @@ public:
     void destroy(char full = 'n');
     void doWhenReady(float dt);
     void setToStartLocation() { this->x = GAME_WIDTH / 2; this->y = GAME_HEIGHT * 3 / 4; }
+    void playerUpdate(float dt);
 };

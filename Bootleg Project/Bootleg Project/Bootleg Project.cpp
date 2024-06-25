@@ -128,10 +128,12 @@ int main()
                 if (!(PointsManager::points[i]->isDestroyed()))
                     window.draw(PointsManager::points[i]->getSprite());
             }
-            for (int i = 0; i < game.entities.size(); i++)
+                if (!(game.player->isDestroyed()))
+                    window.draw(game.player->getSprite());
+            for (int i = 0; i < EnemyManager::enemies.size(); i++)
             {
-                if (!(game.entities[i]->isDestroyed()))
-                    window.draw(game.entities[i]->getSprite());
+                if (!(EnemyManager::enemies[i]->isDestroyed()))
+                    window.draw(EnemyManager::enemies[i]->getSprite());
             }
             for (int i = 0; i < DanmakuManager::bullets.size(); i++)
             {

@@ -22,6 +22,12 @@ void PointsManager::createRandomScorePoints(cords pos)
 
 void PointsManager::pointsUpdate(float dt)
 {
-    for (int i = 0; i < points.size(); i++)
-        points[i]->process(dt);
+	for (int i = 0; i < points.size(); i++)
+	{
+		if (points[i]->out_of_bounds() || points[i]->isDestroyed())
+			points.erase(points.begin() + i);
+		else
+			points[i]->process(dt);
+	}
+
 }

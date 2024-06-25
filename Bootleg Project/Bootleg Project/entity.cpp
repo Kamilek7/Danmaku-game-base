@@ -24,6 +24,7 @@ Entity::Entity(float _x, float _y, float _hitbox_size, float _speed, float _rota
     this->circHitbox.setRadius(hitbox_size);
     this->circHitbox.setOrigin(this->hitbox_size, this->hitbox_size);
     this->circHitbox.setPosition(this->x, this->y);
+    this->cooldown = false;
 }
 void Entity::process(float dt)
 {

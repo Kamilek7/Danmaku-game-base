@@ -20,4 +20,9 @@ public:
     void destroy( char full = 'n');
     void doWhenReady(float dt);
     char movingDirection() { return 'B'; }
+// tymczasowe
+    void updateSprite() { 
+        this->sprite = sprites.AnimationTypes[1].idle.baseSprite; 
+        this->sprite.setOrigin(24, 24);
+    }
 };
