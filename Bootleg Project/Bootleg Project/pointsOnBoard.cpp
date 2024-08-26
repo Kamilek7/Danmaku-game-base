@@ -25,7 +25,13 @@ void PointsManager::pointsUpdate(float dt)
 	for (int i = 0; i < points.size(); i++)
 	{
 		if (points[i]->out_of_bounds() || points[i]->isDestroyed())
+
+		{
+			delete points[i];
+			points[i] = nullptr;
 			points.erase(points.begin() + i);
+		}
+			
 		else
 			points[i]->process(dt);
 	}

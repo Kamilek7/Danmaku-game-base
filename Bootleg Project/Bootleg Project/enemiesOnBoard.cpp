@@ -60,18 +60,24 @@ void EnemyManager::enemyUpdate(float dt)
     for (int i = 0; i < enemies.size(); i++)
     {
         if (enemies[i]->out_of_bounds() || enemies[i]->isDestroyed())
+        {
+            delete enemies[i];
+            enemies[i] = nullptr;
             enemies.erase(enemies.begin() + i);
+        }
+            
         else
         {
             sprites.AnimationTypes[1].idle.playE(enemies[i]->animTimerGet());
             enemies[i]->updateSprite();
             enemies[i]->process(dt);
+            if (enemies[i]->isReady())
+            {
+                enemies[i]->readyChange(false);
+                enemies[i]->doWhenReady(dt);
+            }
         }
 
-        if (enemies[i]->isReady())
-        {
-            enemies[i]->readyChange(false);
-            enemies[i]->doWhenReady(dt);
-        }
+
     }
 }

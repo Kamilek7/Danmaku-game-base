@@ -145,6 +145,8 @@
     <ClCompile Include="animatedSprite.cpp" />
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="board.cpp" />
+    <ClCompile Include="gameManager.cpp" />
+    <ClCompile Include="hud.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="points.cpp" />
     <ClCompile Include="pointsOnBoard.cpp" />
@@ -162,6 +164,8 @@
     <ClInclude Include="animatedSprite.h" />
     <ClInclude Include="animation.h" />
     <ClInclude Include="board.h" />
+    <ClInclude Include="gameManager.h" />
+    <ClInclude Include="hud.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="points.h" />
     <ClInclude Include="pointsOnBoard.h" />

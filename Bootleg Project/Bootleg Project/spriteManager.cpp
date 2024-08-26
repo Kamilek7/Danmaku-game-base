@@ -13,5 +13,4 @@ SpriteManager::SpriteManager()
     Animation enemy("enemy", 1.6);
     AnimationTypes.push_back(enemy);
 }
-
 SpriteManager sprites = SpriteManager();

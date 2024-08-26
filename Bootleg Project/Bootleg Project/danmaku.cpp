@@ -144,7 +144,12 @@ void DanmakuManager::bulletUpdate(float dt)
     for (int i = 0; i < bullets.size(); i++)
     {
         if (bullets[i]->out_of_bounds() || bullets[i]->isDestroyed())
+        {
+            delete bullets[i];
+            bullets[i] = nullptr;
             bullets.erase(bullets.begin() + i);
+        }
+            
         else
         {
             if (bullets[i]->checkType() == 'B')
