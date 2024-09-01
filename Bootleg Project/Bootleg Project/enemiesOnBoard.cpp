@@ -1,9 +1,9 @@
 #include "enemiesOnBoard.h"
 std::vector<Enemy*> EnemyManager::enemies = {};
+int EnemyManager::count = 0;
 
 void EnemyManager::createEnemy(bool _boss, int _type, int _variant, int _position, float _x, float _y, float _hp, float _hitbox_radius, float _speed, float _rotation, float _ang_speed_of_rotation, float _acceleration)
 {
-    static int count = 0;
     count++;
     Enemy* temp = new Enemy(_boss, _type, _variant, _position, _x, _y, _hp, _hitbox_radius, _speed, _rotation, _ang_speed_of_rotation, _acceleration);
     enemies.insert(enemies.end(), temp);
@@ -80,4 +80,10 @@ void EnemyManager::enemyUpdate(float dt)
 
 
     }
+}
+
+void EnemyManager::reset()
+{
+    enemies = {};
+    count = 0;
 }

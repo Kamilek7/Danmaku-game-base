@@ -9,7 +9,7 @@ void ScoreManager::reset()
 {
     internalScore = 0;
     score = 0;
-    lives = 0;
+    lives = 5;
     power = 0;
 }
 

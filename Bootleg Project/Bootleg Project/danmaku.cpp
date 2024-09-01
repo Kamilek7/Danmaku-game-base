@@ -171,3 +171,8 @@ void DanmakuManager::bulletUpdate(float dt)
     }
 }
 
+void DanmakuManager::reset()
+{
+    bullets = {};
+    playerPos = cords{ 0, 0 };
+}

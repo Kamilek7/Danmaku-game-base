@@ -243,9 +243,14 @@ void Board::gameProcess(float dt, int gameMode)
 }
 void Board::restart()
 {
+    endStage = false;
     switch1 = false;
     pause = false;
     ScoreManager::reset();
+    DanmakuManager::reset();
+    EnemyManager::reset();
+    PointsManager::reset();
+    stage_progress = 0;
     waveTimer = 0;
     waitingTimer = 0;
     player = new Player();

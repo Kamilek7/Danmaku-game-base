@@ -21,4 +21,6 @@ public:
     static void HomingUShot(cords pos, int amount, bool timed = false, float T = 0, float dt = 0);
 
     static void bulletUpdate(float dt);
+
+    static void reset();
 };

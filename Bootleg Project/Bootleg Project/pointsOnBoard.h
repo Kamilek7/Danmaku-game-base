@@ -8,4 +8,5 @@ public:
 
 	static void createRandomScorePoints(cords pos);
 	static void pointsUpdate(float dt);
+	static void reset();
 };

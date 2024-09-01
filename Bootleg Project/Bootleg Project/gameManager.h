@@ -22,5 +22,9 @@ class Game
 public:
     Game(sf::RenderWindow* window);
     void mainGameProcess(double dt, sf::Event* event);
+    void mainMenuProcess(double dt, sf::Event* event);
+    void toNewStage();
+    void processPauseScreen();
+    void processGameOver();
     void process();
 };

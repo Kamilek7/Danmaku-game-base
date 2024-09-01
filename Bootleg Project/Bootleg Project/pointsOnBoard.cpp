@@ -37,3 +37,8 @@ void PointsManager::pointsUpdate(float dt)
 	}
 
 }
+
+void PointsManager::reset()
+{
+	points = {};
+}
