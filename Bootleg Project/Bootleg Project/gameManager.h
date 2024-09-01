@@ -21,6 +21,9 @@ class Game
     sf::Time time;
 public:
     Game(sf::RenderWindow* window);
+    void processBasicEvents(sf::Event* event);
+    void processInGameEvents(sf::Event* event);
+    void drawGame();
     void mainGameProcess(double dt, sf::Event* event);
     void mainMenuProcess(double dt, sf::Event* event);
     void toNewStage();

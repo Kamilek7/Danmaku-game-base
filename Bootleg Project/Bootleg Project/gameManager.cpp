@@ -14,73 +14,62 @@ Game::Game(sf::RenderWindow* window)
     releasedPause = false;
     stop = false;
 }
-
-void Game::mainGameProcess(double dt, sf::Event* event)
+void Game::processBasicEvents(sf::Event* event)
 {
-
-    gameBoard.gameProcess(dt, gameMode);
-    while (windowPointer->pollEvent(*event))
+    if (event->type == sf::Event::Closed || (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)))
+        windowPointer->close();
+    if (sf::Event::KeyPressed)
     {
-        if (event->type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-            windowPointer->close();
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
-            pressedPause = true;
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) && pressedPause)
-            releasedPause = true;
-        if (sf::Event::KeyPressed)
-        {
-            if (event->key.code == sf::Keyboard::W)
-                W = true;
-            if (event->key.code == sf::Keyboard::S)
-                S = true;
-            if (event->key.code == sf::Keyboard::A)
-                A = true;
-            if (event->key.code == sf::Keyboard::D)
-                D = true;
-            if (event->key.code == sf::Keyboard::Space)
-            {
-                if (!gameBoard.checkPause() && !gameBoard.isEndOfStage())
-                    gameBoard.player->shooting = true;
-                else
-                {
-                    selected = true;
-                    unselected = false;
-                }
-            }
-        }
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::W)))
-            W = false;
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::S)))
-            S = false;
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
-            A = false;
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
-            D = false;
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)))
+        if (event->key.code == sf::Keyboard::W)
+            W = true;
+        if (event->key.code == sf::Keyboard::S)
+            S = true;
+        if (event->key.code == sf::Keyboard::A)
+            A = true;
+        if (event->key.code == sf::Keyboard::D)
+            D = true;
+    }
+    if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::W)))
+        W = false;
+    if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::S)))
+        S = false;
+    if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
+        A = false;
+    if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
+        D = false;
+}
+
+void Game::processInGameEvents(sf::Event* event)
+{
+    processBasicEvents(event);
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+        pressedPause = true;
+    if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) && pressedPause)
+        releasedPause = true;
+    if (sf::Event::KeyPressed)
+    {
+        if (event->key.code == sf::Keyboard::Space)
         {
             if (!gameBoard.checkPause() && !gameBoard.isEndOfStage())
-                gameBoard.player->shooting = false;
+                gameBoard.player->shooting = true;
             else
-                unselected = true;
+            {
+                selected = true;
+                unselected = false;
+            }
         }
     }
-    if (releasedPause && pressedPause)
+    if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)))
     {
-        pressedPause = false;
-        releasedPause = false;
-        stop = false;
-    }
-    if (pressedPause && !stop)
-    {
-        gameBoard.pauseUnpause();
-        if (gameBoard.checkPause())
-            SoundManager::playSound("se_pause.wav");
+        if (!gameBoard.checkPause() && !gameBoard.isEndOfStage())
+            gameBoard.player->shooting = false;
         else
-            SoundManager::playSound("se_cancel00.wav");
-        stop = true;
+            unselected = true;
     }
-    gameBoard.player->moveX(A, D);
-    gameBoard.player->moveY(W, S);
+}
+void Game::drawGame()
+{
     windowPointer->draw(HUDTextures.GAMEBOARD);
     for (int i = 0; i < PointsManager::points.size(); i++)
     {
@@ -105,31 +94,41 @@ void Game::mainGameProcess(double dt, sf::Event* event)
     windowPointer->draw(HUDTextures.Lives);
 }
 
+void Game::mainGameProcess(double dt, sf::Event* event)
+{
+
+    gameBoard.gameProcess(dt, gameMode);
+    while (windowPointer->pollEvent(*event))
+    {
+        processInGameEvents(event);
+    }
+    if (releasedPause && pressedPause)
+    {
+        pressedPause = false;
+        releasedPause = false;
+        stop = false;
+    }
+    if (pressedPause && !stop)
+    {
+        gameBoard.pauseUnpause();
+        if (gameBoard.checkPause())
+            SoundManager::playSound("se_pause.wav");
+        else
+            SoundManager::playSound("se_cancel00.wav");
+        stop = true;
+    }
+    gameBoard.player->moveX(A, D);
+    gameBoard.player->moveY(W, S);
+
+    drawGame();
+}
+
 void Game::mainMenuProcess(double dt, sf::Event* event)
 {
     while (windowPointer->pollEvent(*event))
     {
-        if (event->type == sf::Event::Closed || (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)))
-            windowPointer->close();
-        if (sf::Event::KeyPressed)
-        {
-            if (event->key.code == sf::Keyboard::W)
-                W = true;
-            if (event->key.code == sf::Keyboard::S)
-                S = true;
-            if (event->key.code == sf::Keyboard::A)
-                A = true;
-            if (event->key.code == sf::Keyboard::D)
-                D = true;
-        }
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::W)))
-            W = false;
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::S)))
-            S = false;
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
-            A = false;
-        if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
-            D = false;
+        processBasicEvents(event);
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
         {
             SoundManager::playSound("se_ok00.wav");

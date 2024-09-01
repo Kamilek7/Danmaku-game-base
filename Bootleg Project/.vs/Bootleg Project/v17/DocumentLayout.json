@@ -3,40 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\gameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\danmaku.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\danmaku.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\danmaku.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\danmaku.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\enemiesOnBoard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\enemiesOnBoard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\pointsOnBoard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\pointsOnBoard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\enemiesOnBoard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\enemiesOnBoard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\pointsOnBoard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\pointsOnBoard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\gameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\Bootleg Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\Bootleg Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\gameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\points.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -71,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\gameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\animatedSprite.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{ABC9BDBC-6FC8-4639-9A81-44A02F50A911}|Bootleg Project\\Bootleg Project.vcxproj|solutionrelative:Bootleg Project\\animatedSprite.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -102,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,98 +90,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "danmaku.h",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\danmaku.h",
-              "RelativeDocumentMoniker": "Bootleg Project\\danmaku.h",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\danmaku.h*",
-              "RelativeToolTip": "Bootleg Project\\danmaku.h*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-01T10:57:30.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "pointsOnBoard.h",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\pointsOnBoard.h",
-              "RelativeDocumentMoniker": "Bootleg Project\\pointsOnBoard.h",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\pointsOnBoard.h*",
-              "RelativeToolTip": "Bootleg Project\\pointsOnBoard.h*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-01T10:52:55.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "enemiesOnBoard.cpp",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\enemiesOnBoard.cpp",
-              "RelativeDocumentMoniker": "Bootleg Project\\enemiesOnBoard.cpp",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\enemiesOnBoard.cpp*",
-              "RelativeToolTip": "Bootleg Project\\enemiesOnBoard.cpp*",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAAAFQAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-26T18:57:42.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "enemiesOnBoard.h",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\enemiesOnBoard.h",
-              "RelativeDocumentMoniker": "Bootleg Project\\enemiesOnBoard.h",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\enemiesOnBoard.h*",
-              "RelativeToolTip": "Bootleg Project\\enemiesOnBoard.h*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-08-26T18:57:27.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "pointsOnBoard.cpp",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\pointsOnBoard.cpp",
-              "RelativeDocumentMoniker": "Bootleg Project\\pointsOnBoard.cpp",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\pointsOnBoard.cpp*",
-              "RelativeToolTip": "Bootleg Project\\pointsOnBoard.cpp*",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-26T19:02:51.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "danmaku.cpp",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\danmaku.cpp",
-              "RelativeDocumentMoniker": "Bootleg Project\\danmaku.cpp",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\danmaku.cpp*",
-              "RelativeToolTip": "Bootleg Project\\danmaku.cpp*",
-              "ViewState": "AQIAAJsAAAAAAAAAAAAAAK0AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-26T19:02:08.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "board.cpp",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.cpp",
               "RelativeDocumentMoniker": "Bootleg Project\\board.cpp",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.cpp*",
-              "RelativeToolTip": "Bootleg Project\\board.cpp*",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAPsAAAAbAAAA",
+              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.cpp",
+              "RelativeToolTip": "Bootleg Project\\board.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPsAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-26T18:14:36.353Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Bootleg Project.cpp",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\Bootleg Project.cpp",
               "RelativeDocumentMoniker": "Bootleg Project\\Bootleg Project.cpp",
@@ -218,20 +116,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "gameManager.cpp",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.cpp",
               "RelativeDocumentMoniker": "Bootleg Project\\gameManager.cpp",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.cpp",
-              "RelativeToolTip": "Bootleg Project\\gameManager.cpp",
-              "ViewState": "AQIAAE8BAAAAAAAAAAAAAFgBAAAGAAAA",
+              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.cpp*",
+              "RelativeToolTip": "Bootleg Project\\gameManager.cpp*",
+              "ViewState": "AQIAAC8BAAAAAAAAAAAQwKYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-09T09:25:16.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "score.cpp",
+              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\score.cpp",
+              "RelativeDocumentMoniker": "Bootleg Project\\score.cpp",
+              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\score.cpp",
+              "RelativeToolTip": "Bootleg Project\\score.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-01T10:52:19.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "board.h",
+              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.h",
+              "RelativeDocumentMoniker": "Bootleg Project\\board.h",
+              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.h",
+              "RelativeToolTip": "Bootleg Project\\board.h",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-26T18:12:49.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "player.h",
+              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\player.h",
+              "RelativeDocumentMoniker": "Bootleg Project\\player.h",
+              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\player.h",
+              "RelativeToolTip": "Bootleg Project\\player.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-01T10:48:34.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "player.cpp",
+              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\player.cpp",
+              "RelativeDocumentMoniker": "Bootleg Project\\player.cpp",
+              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\player.cpp",
+              "RelativeToolTip": "Bootleg Project\\player.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-01T10:48:51.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "spriteManager.h",
+              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\spriteManager.h",
+              "RelativeDocumentMoniker": "Bootleg Project\\spriteManager.h",
+              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\spriteManager.h",
+              "RelativeToolTip": "Bootleg Project\\spriteManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-26T19:06:54.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "gameManager.h",
+              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.h",
+              "RelativeDocumentMoniker": "Bootleg Project\\gameManager.h",
+              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.h",
+              "RelativeToolTip": "Bootleg Project\\gameManager.h",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAowBcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-09T09:15:24.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "points.h",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\points.h",
               "RelativeDocumentMoniker": "Bootleg Project\\points.h",
@@ -245,71 +221,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "score.cpp",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\score.cpp",
-              "RelativeDocumentMoniker": "Bootleg Project\\score.cpp",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\score.cpp",
-              "RelativeToolTip": "Bootleg Project\\score.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-01T10:52:19.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "board.h",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.h",
-              "RelativeDocumentMoniker": "Bootleg Project\\board.h",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\board.h",
-              "RelativeToolTip": "Bootleg Project\\board.h",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-08-26T18:12:49.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "player.h",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\player.h",
-              "RelativeDocumentMoniker": "Bootleg Project\\player.h",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\player.h",
-              "RelativeToolTip": "Bootleg Project\\player.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-01T10:48:34.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "player.cpp",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\player.cpp",
-              "RelativeDocumentMoniker": "Bootleg Project\\player.cpp",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\player.cpp",
-              "RelativeToolTip": "Bootleg Project\\player.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-01T10:48:51.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "spriteManager.h",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\spriteManager.h",
-              "RelativeDocumentMoniker": "Bootleg Project\\spriteManager.h",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\spriteManager.h",
-              "RelativeToolTip": "Bootleg Project\\spriteManager.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-08-26T19:06:54.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "enemy.cpp",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\enemy.cpp",
               "RelativeDocumentMoniker": "Bootleg Project\\enemy.cpp",
@@ -322,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 11,
               "Title": "bullet.h",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\bullet.h",
               "RelativeDocumentMoniker": "Bootleg Project\\bullet.h",
@@ -335,20 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "gameManager.h",
-              "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.h",
-              "RelativeDocumentMoniker": "Bootleg Project\\gameManager.h",
-              "ToolTip": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\gameManager.h",
-              "RelativeToolTip": "Bootleg Project\\gameManager.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowBsAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-09T09:15:24.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 12,
               "Title": "animatedSprite.cpp",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\animatedSprite.cpp",
               "RelativeDocumentMoniker": "Bootleg Project\\animatedSprite.cpp",
@@ -361,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 13,
               "Title": "constants.cpp",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\constants.cpp",
               "RelativeDocumentMoniker": "Bootleg Project\\constants.cpp",
@@ -373,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 16,
               "Title": "bullet.cpp",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\bullet.cpp",
               "RelativeDocumentMoniker": "Bootleg Project\\bullet.cpp",
@@ -385,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 14,
               "Title": "enemy.h",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\enemy.h",
               "RelativeDocumentMoniker": "Bootleg Project\\enemy.h",
@@ -397,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 15,
               "Title": "entity.h",
               "DocumentMoniker": "C:\\Users\\kamil\\Documents\\projekty\\nieskonczone\\Cpp\\Bootleg Project\\Bootleg Project\\Bootleg Project\\entity.h",
               "RelativeDocumentMoniker": "Bootleg Project\\entity.h",

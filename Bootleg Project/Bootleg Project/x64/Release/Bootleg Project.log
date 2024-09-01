@@ -1,88 +1,18 @@
-﻿  Bootleg Project.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\Bootleg Project.cpp(9,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\Bootleg Project.cpp(11,54): warning C4244: "argument": konwersja z "const float" do "unsigned int", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\Bootleg Project.cpp(11,43): warning C4244: "argument": konwersja z "const float" do "unsigned int", możliwa utrata danych
-  board.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(126,19): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(128,19): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(130,19): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(132,19): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(166,23): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(168,23): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(170,23): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(172,23): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(212,121): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(232,121): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\board.cpp(236,44): warning C4305: "=": obcięcie z "double" do "float"
-  danmaku.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(21,109): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(21,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(37,103): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(37,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(42,32): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(44,68): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(58,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(60,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(76,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(83,78): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(99,96): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(99,86): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(109,92): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(109,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(125,32): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(128,68): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(135,28): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(138,64): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(159,50): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(159,45): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\danmaku.cpp(160,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-  enemiesOnBoard.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(15,96): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(16,96): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(25,149): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(25,121): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(30,129): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(30,107): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(37,104): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(37,68): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(38,104): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(42,94): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(43,77): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(48,103): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(48,98): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(49,103): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(49,98): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(53,110): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemiesOnBoard.cpp(54,110): warning C4305: "argument": obcięcie z "double" do "float"
-  enemy.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemy.cpp(30,57): warning C4305: "=": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemy.cpp(32,56): warning C4305: "=": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemy.cpp(34,49): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemy.cpp(61,41): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\enemy.cpp(123,17): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
-  gameManager.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(21,27): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(154,48): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(176,57): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(176,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(200,33): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(206,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(209,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(212,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(269,33): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(275,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(278,32): warning C4305: "argument": obcięcie z "double" do "float"
-  player.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\player.cpp(116,99): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\player.cpp(119,99): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\player.cpp(122,99): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\player.cpp(125,99): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-  pointsOnBoard.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\pointsOnBoard.cpp(19,85): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\pointsOnBoard.cpp(19,34): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+﻿  gameManager.cpp
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(100,27): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(153,48): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(175,57): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(175,32): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(199,33): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(205,32): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(208,32): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(211,32): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(268,33): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(274,32): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(277,32): warning C4305: "argument": obcięcie z "double" do "float"
   Trwa generowanie kodu
-  109 of 803 functions (13.6%) were compiled, the rest were copied from previous compilation.
-    48 functions were new in current compilation
-    75 functions had inline decision re-evaluated but remain unchanged
+  1 of 806 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   Bootleg Project.vcxproj -> C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\x64\Release\Bootleg Project.exe
