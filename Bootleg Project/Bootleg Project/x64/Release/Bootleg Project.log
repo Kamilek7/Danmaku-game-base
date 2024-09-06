@@ -1,17 +1,8 @@
-﻿  gameManager.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(100,27): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(153,48): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(175,57): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(175,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(199,33): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(205,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(208,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(211,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(268,33): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(274,32): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\gameManager.cpp(277,32): warning C4305: "argument": obcięcie z "double" do "float"
+﻿  pointsOnBoard.cpp
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\pointsOnBoard.cpp(19,85): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\pointsOnBoard.cpp(19,34): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
   Trwa generowanie kodu
-  1 of 806 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+  3 of 799 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     2 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu

@@ -1,20 +1,7 @@
 #include "animatedSprite.h"
 #include <algorithm>
 
-AnimatedSprite AnimatedSprite::operator=(const AnimatedSprite& temp)
-{
-	if (this == &temp)
-		return *this;
-	this->baseName = temp.baseName;
-	this->baseSprite = temp.baseSprite;
-	this->baseTextures = temp.baseTextures;
-	this->currentFrame = temp.currentFrame;
-	this->frameNum = temp.frameNum;
-	this->repeat = temp.repeat;
-	return *this;
-}
-
-AnimatedSprite::AnimatedSprite(int _frameNum, std::string _baseName, float _scale, bool _repeat)
+void AnimatedSprite::FillInfo(int _frameNum, std::string _baseName, float _scale, bool _repeat)
 {
 	if (_baseName != "anim")
 	{
@@ -36,6 +23,7 @@ AnimatedSprite::AnimatedSprite(int _frameNum, std::string _baseName, float _scal
 		this->baseSprite.setScale(_scale, _scale);
 	}
 }
+
 void AnimatedSprite::play(float dt)
 {
 	if (this->frameNum > 1)
