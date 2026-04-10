@@ -1,9 +1,0 @@
-﻿  pointsOnBoard.cpp
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\pointsOnBoard.cpp(19,85): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\Bootleg Project\pointsOnBoard.cpp(19,34): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-  Trwa generowanie kodu
-  3 of 799 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
-  Zakończono generowanie kodu
-  Bootleg Project.vcxproj -> C:\Users\kamil\Documents\projekty\nieskonczone\Cpp\Bootleg Project\Bootleg Project\x64\Release\Bootleg Project.exe
