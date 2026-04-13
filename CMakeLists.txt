@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(SFML_Linux)
+project(danmaku)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CSS_STANDARD_REQUIRED ON)
 
@@ -16,11 +16,18 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(SFML)
 
-file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS src/*.cpp src/*.c)
+file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS src/**/*.cpp src/**/*.c)
 
-add_executable(SFML_Linux ${SRCS})
+add_executable(danmaku ${SRCS})
 
-target_link_libraries(SFML_Linux
+target_include_directories(danmaku PRIVATE
+    ${CMAKE_SOURCE_DIR}/src/dataHandlers
+    ${CMAKE_SOURCE_DIR}/src/entities
+    ${CMAKE_SOURCE_DIR}/src/entityHandlers
+    ${CMAKE_SOURCE_DIR}/src/gameLogic
+)
+
+target_link_libraries(danmaku
     PRIVATE
         sfml-graphics
         sfml-window
@@ -28,9 +35,9 @@ target_link_libraries(SFML_Linux
         sfml-audio
 )
 
-add_custom_command(TARGET SFML_Linux POST_BUILD
+add_custom_command(TARGET danmaku POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
-        "$<TARGET_FILE:SFML_Linux>"
-        "${CMAKE_SOURCE_DIR}/src/SFML_Linux${CMAKE_EXECUTABLE_SUFFIX}"
+        "$<TARGET_FILE:danmaku>"
+        "${CMAKE_SOURCE_DIR}/src/danmaku${CMAKE_EXECUTABLE_SUFFIX}"
     VERBATIM
 )

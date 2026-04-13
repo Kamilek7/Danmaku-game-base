@@ -1,5 +1,7 @@
 #pragma once
 #include "entity.h"
+#include "spriteManager.h"
+extern SpriteManager sprites;
 
 class Points :public Entity
 {

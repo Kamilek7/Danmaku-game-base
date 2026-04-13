@@ -18,7 +18,6 @@ protected:
     float animTimer;
     sf::CircleShape circHitbox;
     sf::Color color;
-    sf::Texture texture;
     sf::Sprite sprite;
 public:
     friend class DanmakuManager;

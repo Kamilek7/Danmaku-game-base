@@ -6,11 +6,9 @@ Points::Points(float _x, float _y, char _type, int _value)
     this->typeP = _type;
     this->value = _value;
     if (_type == 's')
-        this->texture.loadFromFile("resources/sprites/scorePoint.png");
+        this->sprite = sprites.ScorePointSprite;
     else
-        this->texture.loadFromFile("resources/sprites/powerPoint.png");
-    this->texture.setSmooth(true);
-    this->sprite.setTexture(this->texture);
+        this->sprite = sprites.PowerPointSprite;
     this->sprite.setScale(1.6, 1.6);
     this->circHitbox.setRadius(30);
     this->type = 'S';
