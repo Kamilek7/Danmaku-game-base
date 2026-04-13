@@ -41,7 +41,7 @@ void ScoreManager::cutPower()
 
 void ScoreManager::changeLives(int value)
 {
-    lives += value;
+    // lives += value;
 }
 
 long unsigned int ScoreManager::getScore()

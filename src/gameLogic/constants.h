@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CONSTANTS_H_
+#define CONSTANTS_H_
 
 #define _USE_MATH_DEFINES
 #include <SFML/Window.hpp>
@@ -9,9 +10,13 @@
 #include <string>
 #include "score.h"
 #include <cmath>
+#include <map>
+
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
 #endif
+
+
 const float APP_WIDTH = 1200;
 const float APP_HEIGHT = 900;
 const float GAME_WIDTH = 720;
@@ -29,3 +34,6 @@ struct cords
     float y = 0;
 };
 std::vector<cords> adjacentTiles(int i, int j);
+
+
+#endif

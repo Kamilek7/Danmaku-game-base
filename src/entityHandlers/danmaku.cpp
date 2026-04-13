@@ -141,12 +141,11 @@ void DanmakuManager::HomingUShot(cords pos, int amount, bool timed, float T, flo
 
 void DanmakuManager::bulletUpdate(float dt)
 {
-    for (int i = 0; i < bullets.size(); i++)
+    for (int i = bullets.size()-1; i >=0; i--)
     {
         if (bullets[i]->out_of_bounds() || bullets[i]->isDestroyed())
         {
             delete bullets[i];
-            bullets[i] = nullptr;
             bullets.erase(bullets.begin() + i);
         }
             
